@@ -1,0 +1,250 @@
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    overflow: hidden
+
+// sky
+
+.sky
+    position: absolute
+    height: 50%
+    width: 100%
+    background-color: #3e3bee
+    animation: night 30s infinite
+    
+
+    .sun
+        position: absolute
+        height: 70px
+        width: 70px
+        left: 50%
+        top: 30%
+        transform: translate(-50%,-50%)
+        border-radius: 100%
+        background-color: yellow
+        box-shadow: yellow 0px 0px 50px
+        animation: sun 30s infinite
+
+    .cloud
+        position: absolute
+        height: 80px
+        width: 200px
+        background-color: white
+        top: 30%
+        transform: translateY(-50%)
+        border-radius: 40%
+        animation: cloud infinite 40s
+
+    .cloud::before
+        content: ""
+        position: absolute
+        height: 50px
+        width: 120px
+        bottom: 30%
+        left: 50%
+        transform: translate(-50%,-50%)
+        background-color: white
+        border-radius: 50%
+    
+@keyframes cloud
+    0%
+        left: -500px
+    100%
+        left: 2000px
+    
+@keyframes sun
+    0%
+        top: 1000px
+    40%
+        top: 50px
+    60%
+        top: 50px
+    100%
+        top: 1000px
+
+@keyframes night
+    0%
+        background-color: #230757
+    40%
+        background-color: #5973e7
+    60%
+        background-color: #5973e7
+    100%
+        background-color: #230757
+            
+        
+
+// grass
+
+.grass
+    position: absolute
+    width: 100%
+    height: 50%
+    background-color: #1cd135
+    bottom: 0
+
+.grass::before
+    content: ""
+    position: absolute
+    width: 600px
+    height: 350px
+    bottom: 200px
+    left: -10%
+    border-radius: 50%
+    background-color: red
+    background-color: #1cd135
+
+.skyscapper
+    position: absolute
+    width: 250px
+    height: 350px
+    background-color: grey
+    bottom: 80%
+    right: 5%
+
+.skyscapper::before
+    content: ""
+    position: absolute
+    border-left: 180px solid transparent
+    border-right: 180px solid transparent
+    border-bottom: 120px solid #000
+    bottom: 330px
+    left: -55px
+
+.window
+    position: absolute
+    width: 50px
+    height: 50px
+    background-color: yellow
+
+.one
+    left: 30px
+    top: 50px
+
+.two
+    left: 30px
+    top: 150px
+
+.three
+    right: 30px
+    top: 50px
+    animation: light infinite .2s
+
+.four
+    right: 30px
+    top: 150px
+
+
+    
+.door
+    position: absolute
+    height: 120px
+    width: 70px
+    background-color: black
+    bottom: 0px
+    left: 50px
+    transform: translateX(50%)
+
+.tree
+    position: absolute
+    height: 200px
+    width: 40px
+    background-color: brown
+    right: 450px
+    bottom: 350px
+
+.tree::before
+    content: ""
+    position: absolute
+    width: 150px
+    height: 150px
+    background-color: darkgreen
+    border-radius: 100%
+    top: -130px
+    left: 50%
+    transform: translateX(-50%)
+
+.road
+    position: absolute
+    width: 100%
+    height: 100px
+    background-color: #c9bcbc
+    bottom: 100px
+
+    .car
+        position: absolute
+        width: 150px
+        height: 70px
+        background-color: red
+        left: 10%
+        top: -15px
+        border-radius: 15px
+        animation: car 14s infinite
+    
+.car::after, .car::before
+    content: ""
+    position: absolute
+    bottom: 0
+    width: 40px
+    height: 40px
+    background-color: red
+
+.car::after
+    left: -20px
+
+.car::before
+    right: -20px
+    border-top-right-radius: 20px
+
+.wheel
+    position: absolute
+    z-index: 1
+    bottom: -15px
+    width: 40px
+    height: 40px
+    background-color: black
+    border-radius: 100%
+    border: 4px dashed grey
+    animation: wheel 1s infinite
+
+.rear-wheel
+    left: 0
+
+.front-wheel
+    right: 0
+
+.glass
+    position: absolute
+    height: 35px
+    width: 50px
+    top: 5px
+    background-color: blue
+    z-index: 1
+
+.front-glass
+    right: 10px
+
+.rear-glass
+    left: 10px
+
+@keyframes wheel
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+
+@keyframes light
+    0%
+        background-color: tomato
+    100%
+        background-color: yellow
+    
+@keyframes car
+    0%
+        left: -500px
+    100%
+        left: 2000px
+        

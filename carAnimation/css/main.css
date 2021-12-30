@@ -1,0 +1,246 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: grey;
+}
+
+.trainAnimation {
+  position: absolute;
+  height: 900px;
+  width: 800px;
+  left: calc( 50% - 400px);
+  top: 0px;
+  background-color: #22134b;
+  overflow: hidden;
+}
+
+.cloud {
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  background-color: #000000;
+  border-radius: 50px;
+  z-index: 1;
+}
+
+.one {
+  left: 40px;
+  top: 200px;
+  -webkit-animation: cloud infinite 15s;
+          animation: cloud infinite 15s;
+}
+
+.two {
+  left: -200px;
+  top: 200px;
+  -webkit-animation: cloud infinite 15s 3.5s;
+          animation: cloud infinite 15s 3.5s;
+}
+
+.one::before, .two::before {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 60px;
+  top: 10px;
+  background-color: black;
+  left: 35px;
+  top: -30px;
+  border-radius: 50%;
+}
+
+.moon {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  top: 200px;
+  left: calc( 50% - 30px);
+  border-radius: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: #fff 15px 10px 25px;
+          box-shadow: #fff 15px 10px 25px;
+}
+
+@-webkit-keyframes cloud {
+  0% {
+    left: -150px;
+  }
+  100% {
+    left: 950px;
+  }
+}
+
+@keyframes cloud {
+  0% {
+    left: -150px;
+  }
+  100% {
+    left: 950px;
+  }
+}
+
+.star {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: gold;
+  border-radius: 100%;
+  -webkit-box-shadow: gold -5px -5px 5px;
+          box-shadow: gold -5px -5px 5px;
+  -webkit-animation: star 6s infinite;
+          animation: star 6s infinite;
+}
+
+@-webkit-keyframes star {
+  0% {
+    left: -100px;
+    top: 0px;
+  }
+  100% {
+    left: 10000px;
+    top: 800px;
+  }
+}
+
+@keyframes star {
+  0% {
+    left: -100px;
+    top: 0px;
+  }
+  100% {
+    left: 10000px;
+    top: 800px;
+  }
+}
+
+.bridge {
+  position: absolute;
+  height: 30px;
+  width: 100%;
+  background-color: #410707;
+  bottom: 200px;
+}
+
+.column {
+  position: absolute;
+  height: 200px;
+  width: 60px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: #410707;
+  bottom: 0;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.train {
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  background-color: #333436;
+  bottom: 230px;
+  left: 200px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 50px;
+  -webkit-box-shadow: #c8ca34 150px 10px 25px;
+          box-shadow: #c8ca34 150px 10px 25px;
+  -webkit-animation: train 45s infinite;
+          animation: train 45s infinite;
+  -webkit-transition: 1s background-color;
+  transition: 1s background-color;
+}
+
+.train p {
+  color: white;
+  margin-left: 15px;
+  margin-top: 35px;
+}
+
+.train:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #212122;
+}
+
+.train:hover p {
+  display: none;
+}
+
+.train:hover .window {
+  display: none;
+}
+
+.train:hover::after {
+  display: none;
+}
+
+.train:hover::before {
+  background-color: #212122;
+}
+
+.window {
+  position: absolute;
+  width: 60px;
+  height: 25px;
+  background-color: #c8ca34;
+  top: 5px;
+  right: 15px;
+  border-top-right-radius: 50px;
+}
+
+.train::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 5px;
+  background-color: #c8ca34;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  right: 0;
+  bottom: 10px;
+}
+
+.train::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  background-color: #363333;
+  right: 155px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  -webkit-transition: 1s background-color;
+  transition: 1s background-color;
+}
+
+@-webkit-keyframes train {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 1200px;
+  }
+}
+
+@keyframes train {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 1200px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
